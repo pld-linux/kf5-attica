@@ -11,7 +11,7 @@
 Summary:	A Qt library that implements the Open Collaboration Services API
 Name:		kf5-%{kfname}
 Version:	5.4.0
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -27,6 +27,7 @@ BuildRequires:	Qt5Widgets-devel >= %{qtver}
 %endif
 BuildRequires:	cmake >= 2.8.12
 BuildRequires:	kf5-extra-cmake-modules >= 1.4.0
+BuildRequires:	qt5-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
