@@ -5,17 +5,17 @@
 # TODO:
 # - runtime Requires if any
 
-%define		kdeframever	5.45
+%define		kdeframever	5.48
 %define		qtver		5.3.2
 %define		kfname		attica
 Summary:	A Qt library that implements the Open Collaboration Services API
 Name:		kf5-%{kfname}
-Version:	5.45.0
+Version:	5.48.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	dc7210391cd11edcc2b08119b5164edf
+# Source0-md5:	25af6d536dd5a74bc6e73c7d5d96fba6
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= %{qtver}
