@@ -6,7 +6,7 @@
 # - runtime Requires if any
 
 %define		kdeframever	5.80
-%define		qtver		5.9.0
+%define		qtver		5.14.0
 %define		kfname		attica
 Summary:	A Qt library that implements the Open Collaboration Services API
 Name:		kf5-%{kfname}
@@ -18,20 +18,19 @@ Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{ve
 # Source0-md5:	e669fa705c69e82a339c34f4dca839a7
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
-BuildRequires:	Qt5Gui-devel >= %{qtver}
 BuildRequires:	Qt5Network-devel >= %{qtver}
-BuildRequires:	Qt5Test-devel >= %{qtver}
 %if %{with tests}
-BuildRequires:	Qt5Gui-devel >= %{qtver}
-BuildRequires:	Qt5Widgets-devel >= %{qtver}
+BuildRequires:	Qt5Test-devel >= %{qtver}
 %endif
-BuildRequires:	cmake >= 2.8.12
+BuildRequires:	cmake >= 3.5
 BuildRequires:	kf5-extra-cmake-modules >= %{version}
 BuildRequires:	ninja
 BuildRequires:	qt5-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
+Requires:	Qt5Core >= %{qtver}
+Requires:	Qt5Network >= %{qtver}
 Requires:	kf5-dirs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,6 +49,8 @@ Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	Qt5Core-devel >= %{qtver}
+Requires:	Qt5Network-devel >= %{qtver}
 
 %description devel
 Header files for %{kfname} development.
