@@ -6,7 +6,7 @@
 # - runtime Requires if any
 
 %define		kdeframever	5.86
-%define		qtver		5.14.0
+%define		qtver		5.15.2
 %define		kfname		attica
 Summary:	A Qt library that implements the Open Collaboration Services API
 Name:		kf5-%{kfname}
@@ -22,7 +22,7 @@ BuildRequires:	Qt5Network-devel >= %{qtver}
 %if %{with tests}
 BuildRequires:	Qt5Test-devel >= %{qtver}
 %endif
-BuildRequires:	cmake >= 3.5
+BuildRequires:	cmake >= 3.16
 BuildRequires:	kf5-extra-cmake-modules >= %{version}
 BuildRequires:	ninja
 BuildRequires:	qt5-build >= %{qtver}
